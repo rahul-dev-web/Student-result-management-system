@@ -1,20 +1,20 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "index.php": {
-      "runtime": "vercel-php@0.5.2"
-    },
-    "login.php": {
-      "runtime": "vercel-php@0.5.2"
-    },
-    "result.php": {
-      "runtime": "vercel-php@0.5.2"
-    },
-    "student/**/*.php": {
-      "runtime": "vercel-php@0.5.2"
-    },
-    "admin/**/*.php": {
+    "api/**/*.php": {
       "runtime": "vercel-php@0.5.2"
     }
-  }
+  },
+  "routes": [
+    { "src": "/", "dest": "/api/index.php" },
+    { "src": "/login.php", "dest": "/api/login.php" },
+    { "src": "/result.php", "dest": "/api/result.php" },
+    { "src": "/student/dashboard.php", "dest": "/api/student/dashboard.php" },
+    { "src": "/student/logout.php", "dest": "/api/student/logout.php" },
+    { "src": "/admin/login.php", "dest": "/api/admin/login.php" },
+    { "src": "/admin/dashboard.php", "dest": "/api/admin/dashboard.php" },
+    { "src": "/admin/students.php", "dest": "/api/admin/students.php" },
+    { "src": "/admin/results.php", "dest": "/api/admin/results.php" },
+    { "src": "/admin/logout.php", "dest": "/api/admin/logout.php" }
+  ]
 }

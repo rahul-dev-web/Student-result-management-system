@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "index.php": {
+      "runtime": "vercel-php@0.5.2"
+    },
+    "login.php": {
+      "runtime": "vercel-php@0.5.2"
+    },
+    "result.php": {
+      "runtime": "vercel-php@0.5.2"
+    },
+    "student/**/*.php": {
+      "runtime": "vercel-php@0.5.2"
+    },
+    "admin/**/*.php": {
+      "runtime": "vercel-php@0.5.2"
+    }
+  }
+}

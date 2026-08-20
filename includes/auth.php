@@ -26,6 +26,17 @@ function e(?string $value): string
 
 function calculate_result(array $marks): array
 {
+    if (count($marks) !== 5) {
+        throw new InvalidArgumentException('Exactly five subject marks are required.');
+    }
+
+    $marks = array_map('floatval', $marks);
+    foreach ($marks as $mark) {
+        if ($mark < 0 || $mark > 100) {
+            throw new InvalidArgumentException('Each mark must be between 0 and 100.');
+        }
+    }
+
     $total = array_sum($marks);
     $percentage = $total / 5;
 
@@ -40,7 +51,7 @@ function calculate_result(array $marks): array
     $status = min($marks) >= 40 ? 'PASS' : 'FAIL';
 
     return [
-        'total' => $total,
+        'total' => round($total, 2),
         'percentage' => round($percentage, 2),
         'grade' => $grade,
         'status' => $status,

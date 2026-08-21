@@ -3,10 +3,6 @@ session_start();
 require_once __DIR__ . '/config/database.php';
 require_once __DIR__ . '/includes/auth.php';
 
-if (!empty($_SESSION['student'])) {
-    header('Location: student/dashboard.php'); exit;
-}
-
 $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $roll = trim($_POST['roll_number'] ?? '');
@@ -22,7 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($student && password_verify($password, $student['password'])) {
             unset($student['password']);
             $_SESSION['student'] = $student;
-            header('Location: student/dashboard.php'); exit;
+            set_auth_cookie('student', (int)$student['id']);
+            header('Location: /student/dashboard.php');
+            exit;
         }
         $error = 'Invalid roll number or password.';
     }

@@ -1,2 +1,2 @@
 <?php
-require __DIR__ . '/../../../admin/login.php';
+require __DIR__ . '/../../admin/login.php';

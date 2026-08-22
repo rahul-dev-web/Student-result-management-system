@@ -1,0 +1,156 @@
+/* Premium Student Management workspace. Scoped to admin/students.php. */
+.students-page{background:#f7f9fc;color:#0f172a}
+.students-page .admin-sidebar{padding:28px 16px;background:#0f172a;border-right:1px solid #1e293b}
+.students-page .admin-sidebar .brand{padding:0 12px 34px;font-size:16px}
+.students-page .admin-sidebar .brand span{color:#a5b4fc}
+.students-page .admin-sidebar nav{gap:4px}
+.students-page .admin-sidebar nav a{display:flex;align-items:center;gap:11px;padding:11px 12px;border:1px solid transparent;border-radius:10px;color:#94a3b8;font-size:13px;font-weight:650;transition:.18s ease}
+.students-page .admin-sidebar nav a:hover{background:#172033;color:#e2e8f0}
+.students-page .admin-sidebar nav a.active{background:#1e293b;color:#fff;border-color:#273449;box-shadow:inset 3px 0 0 #60a5fa}
+.students-page .students-main{padding:44px 48px 64px;max-width:1480px}
+.students-page .students-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}
+.students-page .students-heading-copy .eyebrow{margin-bottom:9px}
+.students-page .students-heading h1{margin:0;font-size:40px;line-height:1.05;letter-spacing:-.055em}
+.students-page .students-heading .muted{margin:8px 0 0;max-width:620px;font-size:14px}
+.students-page .students-heading-action{flex:none}
+.students-page .students-heading-action .btn{min-height:42px;padding:11px 16px;gap:8px}
+.students-page .students-heading-action svg,.students-page .icon-btn svg,.students-page .search-icon svg,.students-page .drawer-close svg,.students-page .alert-icon svg,.students-page .empty-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.students-page .student-alert{display:flex;align-items:flex-start;gap:10px;margin:0 0 16px;padding:12px 14px;border-radius:12px;font-size:13px}
+.students-page .student-alert .alert-icon{width:28px;height:28px;display:grid;place-items:center;flex:none;border-radius:9px}
+.students-page .student-alert .alert-copy{min-width:0;flex:1;padding-top:3px}
+.students-page .student-alert .alert-close{border:0;background:transparent;color:inherit;opacity:.65;cursor:pointer;padding:5px;border-radius:7px}
+.students-page .student-alert .alert-close:hover{opacity:1;background:rgba(15,23,42,.05)}
+.students-page .student-alert.success{background:#ecfdf3;color:#166534;border:1px solid #bbf7d0}
+.students-page .student-alert.success .alert-icon{background:#dcfce7;color:#15803d}
+.students-page .student-alert.error{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca}
+.students-page .student-alert.error .alert-icon{background:#fee2e2;color:#dc2626}
+.students-page .student-list-panel{margin:0;padding:0;border-radius:18px;overflow:hidden;box-shadow:0 8px 28px rgba(15,23,42,.035)}
+.students-page .student-list-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;border-bottom:1px solid #e2e8f0;background:#fff}
+.students-page .student-list-title h2{margin:0;font-size:18px;letter-spacing:-.03em}
+.students-page .student-list-title p{margin:4px 0 0;color:#94a3b8;font-size:11px}
+.students-page .student-list-title strong{color:#334155}
+.students-page .student-search{display:flex;align-items:center;gap:8px;width:min(390px,100%)}
+.students-page .search-field{position:relative;flex:1;min-width:0}
+.students-page .search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#94a3b8;pointer-events:none;display:grid;place-items:center}
+.students-page .student-search input{width:100%;height:40px;margin:0;padding:0 38px 0 38px;border:1px solid #dbe3ec;border-radius:10px;background:#f8fafc;color:#0f172a;outline:none;font-size:12px;transition:.18s ease}
+.students-page .student-search input::placeholder{color:#94a3b8}
+.students-page .student-search input:focus{border-color:#93c5fd;background:#fff;box-shadow:0 0 0 3px #eff6ff}
+.students-page .search-clear{position:absolute;right:7px;top:50%;transform:translateY(-50%);width:26px;height:26px;border:0;border-radius:7px;background:transparent;color:#94a3b8;cursor:pointer;font-size:16px;line-height:1}
+.students-page .search-clear:hover{background:#e2e8f0;color:#334155}
+.students-page .student-search .btn{height:40px;padding:0 13px;white-space:nowrap}
+.students-page .student-table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.students-page .student-table{width:100%;border-collapse:collapse;min-width:760px;margin:0}
+.students-page .student-table th{padding:12px 20px;background:#fbfcfe;border-bottom:1px solid #e2e8f0;color:#64748b;text-transform:uppercase;letter-spacing:.08em;font-size:9px;font-weight:800;text-align:left;white-space:nowrap}
+.students-page .student-table td{padding:14px 20px;border-bottom:1px solid #edf1f5;font-size:12px;vertical-align:middle}
+.students-page .student-table tbody tr{transition:background .15s ease}
+.students-page .student-table tbody tr:hover{background:#f8fafc}
+.students-page .student-table tbody tr:last-child td{border-bottom:0}
+.students-page .student-cell{display:flex;align-items:center;gap:11px;min-width:220px}
+.students-page .student-avatar{width:36px;height:36px;display:grid;place-items:center;flex:none;border-radius:11px;background:#eff6ff;color:#2563eb;font-size:11px;font-weight:800;letter-spacing:.02em}
+.students-page .student-name{font-weight:750;color:#0f172a;line-height:1.35}
+.students-page .student-email{display:block;margin-top:2px;color:#94a3b8;font-size:10px;line-height:1.3;max-width:230px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.students-page .roll-number{font-weight:750;color:#334155;white-space:nowrap}
+.students-page .course-text{font-weight:650;color:#475569}
+.students-page .semester-badge{display:inline-flex;align-items:center;padding:5px 8px;border-radius:8px;background:#f1f5f9;color:#475569;font-size:10px;font-weight:750;white-space:nowrap}
+.students-page .student-actions{display:flex;align-items:center;justify-content:flex-end;gap:6px;white-space:nowrap}
+.students-page .student-actions form{margin:0}
+.students-page .icon-btn{width:34px;height:34px;padding:0;border-radius:9px}
+.students-page .icon-btn.edit{background:#f8fafc;color:#475569;border-color:#e2e8f0}
+.students-page .icon-btn.edit:hover{background:#eff6ff;color:#2563eb;border-color:#bfdbfe}
+.students-page .icon-btn.delete{background:#fff;color:#dc2626;border-color:#fecaca}
+.students-page .icon-btn.delete:hover{background:#fef2f2;border-color:#fca5a5}
+.students-page .empty-row td{padding:0;border:0}
+.students-page .students-empty{display:grid;place-items:center;text-align:center;padding:64px 24px}
+.students-page .empty-icon{width:48px;height:48px;display:grid;place-items:center;margin-bottom:14px;border-radius:14px;background:#eff6ff;color:#2563eb}
+.students-page .empty-icon svg{width:23px;height:23px}
+.students-page .students-empty h3{margin:0;font-size:18px;letter-spacing:-.025em}
+.students-page .students-empty p{max-width:390px;margin:7px auto 18px;color:#64748b;font-size:12px}
+.students-page .student-cards{display:none}
+
+/* Drawer */
+.students-page .drawer-backdrop{position:fixed;inset:0;z-index:200;background:rgba(15,23,42,.42);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s ease}
+.students-page .drawer-backdrop.open{opacity:1;visibility:visible}
+.students-page .student-drawer{position:fixed;z-index:210;top:0;right:0;bottom:0;width:min(520px,100%);background:#fff;box-shadow:-24px 0 60px rgba(15,23,42,.18);transform:translateX(100%);transition:transform .24s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column}
+.students-page .student-drawer.open{transform:translateX(0)}
+.students-page .drawer-header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:24px 26px 20px;border-bottom:1px solid #e2e8f0}
+.students-page .drawer-header .eyebrow{margin-bottom:7px}
+.students-page .drawer-header h2{margin:0;font-size:22px;letter-spacing:-.04em}
+.students-page .drawer-header p{margin:5px 0 0;color:#64748b;font-size:12px}
+.students-page .drawer-close{width:34px;height:34px;display:grid;place-items:center;flex:none;border:1px solid #e2e8f0;border-radius:9px;background:#fff;color:#64748b;cursor:pointer}
+.students-page .drawer-close:hover{background:#f8fafc;color:#0f172a}
+.students-page .drawer-body{flex:1;overflow-y:auto;padding:22px 26px 26px}
+.students-page .drawer-section{margin-bottom:24px}
+.students-page .drawer-section:last-child{margin-bottom:0}
+.students-page .drawer-section h3{margin:0 0 12px;color:#334155;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}
+.students-page .drawer-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.students-page .drawer-field{margin-bottom:14px}
+.students-page .drawer-field.full{grid-column:1/-1}
+.students-page .drawer-field label{display:block;margin:0 0 7px;color:#334155;font-size:11px;font-weight:750}
+.students-page .drawer-field input,.students-page .drawer-field select{width:100%;height:42px;padding:0 12px;border:1px solid #dbe3ec;border-radius:10px;background:#fff;color:#0f172a;outline:none;font-size:12px;transition:.18s ease}
+.students-page .drawer-field input::placeholder{color:#a1aab8}
+.students-page .drawer-field input:focus,.students-page .drawer-field select:focus{border-color:#93c5fd;box-shadow:0 0 0 3px #eff6ff}
+.students-page .field-hint{display:block;margin-top:6px;color:#94a3b8;font-size:10px;line-height:1.45}
+.students-page .drawer-footer{display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:16px 26px;border-top:1px solid #e2e8f0;background:#fff}
+.students-page .drawer-footer .btn{min-height:40px}
+
+/* Delete confirmation */
+.students-page .confirm-backdrop{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px;background:rgba(15,23,42,.48);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:.18s ease}
+.students-page .confirm-backdrop.open{opacity:1;visibility:visible}
+.students-page .confirm-dialog{width:min(430px,100%);padding:24px;background:#fff;border:1px solid #e2e8f0;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.2);transform:translateY(8px) scale(.98);transition:.18s ease}
+.students-page .confirm-backdrop.open .confirm-dialog{transform:none}
+.students-page .confirm-icon{width:42px;height:42px;display:grid;place-items:center;margin-bottom:15px;border-radius:12px;background:#fef2f2;color:#dc2626}
+.students-page .confirm-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.students-page .confirm-dialog h3{margin:0;font-size:19px;letter-spacing:-.03em}
+.students-page .confirm-dialog p{margin:7px 0 20px;color:#64748b;font-size:12px;line-height:1.55}
+.students-page .confirm-actions{display:flex;justify-content:flex-end;gap:8px}
+.students-page .confirm-actions .btn{min-height:39px}
+.students-page .btn-danger-solid{background:#dc2626;color:#fff;border-color:#dc2626}
+.students-page .btn-danger-solid:hover{background:#b91c1c;border-color:#b91c1c}
+
+body.drawer-open{overflow:hidden}
+@media(max-width:850px){
+  .students-page .admin-layout{display:block;min-height:100vh}
+  .students-page .admin-sidebar{position:fixed;left:0;right:0;bottom:0;z-index:100;padding:0;background:rgba(15,23,42,.96);border-top:1px solid rgba(148,163,184,.18);box-shadow:0 -10px 30px rgba(15,23,42,.16);backdrop-filter:blur(14px)}
+  .students-page .admin-sidebar .brand{display:none}
+  .students-page .admin-sidebar nav{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .students-page .admin-sidebar nav a{min-height:64px;justify-content:center;flex-direction:column;gap:4px;padding:8px 3px;border-radius:0;font-size:10px}
+  .students-page .admin-sidebar nav a.active{box-shadow:inset 0 2px 0 #60a5fa}
+  .students-page .students-main{padding:30px 20px 100px}
+  .students-page .students-heading{align-items:flex-start;flex-direction:column;gap:16px}
+  .students-page .students-heading-action{width:100%}
+  .students-page .students-heading-action .btn{width:100%}
+  .students-page .student-list-toolbar{align-items:flex-start;flex-direction:column;padding:16px}
+  .students-page .student-search{width:100%}
+  .students-page .student-table{display:none}
+  .students-page .student-cards{display:grid}
+  .students-page .student-card{padding:16px;border-bottom:1px solid #edf1f5}
+  .students-page .student-card:last-child{border-bottom:0}
+  .students-page .student-card-top{display:flex;align-items:center;gap:11px}
+  .students-page .student-card .student-cell{min-width:0;flex:1}
+  .students-page .student-card .student-name{font-size:13px}
+  .students-page .student-card .student-email{max-width:calc(100vw - 130px)}
+  .students-page .student-card-meta{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 13px;padding-left:47px}
+  .students-page .student-card-actions{display:flex;gap:7px;padding-left:47px}
+  .students-page .student-card-actions .btn{flex:1;min-height:36px}
+  .students-page .student-list-panel{border-radius:16px}
+}
+@media(max-width:600px){
+  .students-page .students-main{padding:28px 12px 96px}
+  .students-page .students-heading{margin-bottom:22px}
+  .students-page .students-heading h1{font-size:34px}
+  .students-page .students-heading .muted{font-size:12px;line-height:1.55}
+  .students-page .student-search{flex-direction:column;align-items:stretch}
+  .students-page .student-search .btn{width:100%}
+  .students-page .student-list-title h2{font-size:17px}
+  .students-page .student-drawer{width:100%}
+  .students-page .drawer-header{padding:20px 18px 18px}
+  .students-page .drawer-body{padding:20px 18px 22px}
+  .students-page .drawer-grid{grid-template-columns:1fr}
+  .students-page .drawer-field.full{grid-column:auto}
+  .students-page .drawer-footer{padding:14px 18px;display:grid;grid-template-columns:1fr 1.35fr}
+  .students-page .drawer-footer .btn{width:100%}
+  .students-page .confirm-dialog{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  .students-page .student-drawer,.students-page .drawer-backdrop,.students-page .confirm-backdrop,.students-page .confirm-dialog,.students-page .student-table tbody tr,.students-page .student-search input{transition:none}
+}

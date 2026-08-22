@@ -5,8 +5,10 @@
 .students-page .admin-sidebar .brand span{color:#a5b4fc}
 .students-page .admin-sidebar nav{gap:4px}
 .students-page .admin-sidebar nav a{display:flex;align-items:center;gap:11px;padding:11px 12px;border:1px solid transparent;border-radius:10px;color:#94a3b8;font-size:13px;font-weight:650;transition:.18s ease}
+.students-page .admin-sidebar nav a svg{width:17px;height:17px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .students-page .admin-sidebar nav a:hover{background:#172033;color:#e2e8f0}
 .students-page .admin-sidebar nav a.active{background:#1e293b;color:#fff;border-color:#273449;box-shadow:inset 3px 0 0 #60a5fa}
+.students-page .admin-sidebar nav a.logout-link{margin-top:2px}
 .students-page .students-main{padding:44px 48px 64px;max-width:1480px}
 .students-page .students-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}
 .students-page .students-heading-copy .eyebrow{margin-bottom:9px}
@@ -109,7 +111,9 @@ body.drawer-open{overflow:hidden}
   .students-page .admin-sidebar .brand{display:none}
   .students-page .admin-sidebar nav{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
   .students-page .admin-sidebar nav a{min-height:64px;justify-content:center;flex-direction:column;gap:4px;padding:8px 3px;border-radius:0;font-size:10px}
+  .students-page .admin-sidebar nav a svg{width:17px;height:17px}
   .students-page .admin-sidebar nav a.active{box-shadow:inset 0 2px 0 #60a5fa}
+  .students-page .admin-sidebar nav a.logout-link{margin-top:0}
   .students-page .students-main{padding:30px 20px 100px}
   .students-page .students-heading{align-items:flex-start;flex-direction:column;gap:16px}
   .students-page .students-heading-action{width:100%}

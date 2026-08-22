@@ -14,7 +14,7 @@ if ($roll !== '') {
     elseif ($result['total'] === null) $error = 'Result has not been published for this student yet.';
 }
 ?>
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Search Result</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Search Result</title><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/result-page.css"></head>
 <body class="result-search-page"><header class="site-header"><div class="container nav"><a class="brand" href="index.php">Student Result <span>Management</span></a><div class="nav-links"><a href="index.php">Home</a><a href="login.php">Student Login</a><a href="admin/login.php">Admin Login</a></div></div></header>
 <main class="container page result-page">
 <section class="result-intro"><div class="page-heading"><p class="eyebrow result-eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Result Search</p><h1>Check Your Result</h1><p class="muted">Enter your roll number to view the published academic result.</p></div>

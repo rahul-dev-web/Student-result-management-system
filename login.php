@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .student-login-shell{width:min(440px,100%)}
         .auth-brand{font-size:16px;letter-spacing:-.04em;transition:opacity .2s ease}
         .auth-brand:hover{opacity:.78}
-        .student-login-card{padding:34px 32px 28px;border-radius:24px;box-shadow:0 24px 70px rgba(15,23,42,.10);animation:login-card-in .35s ease both}
+        .student-login-card{padding:34px 32px 26px;border-radius:24px;box-shadow:0 24px 70px rgba(15,23,42,.10);animation:login-card-in .35s ease both}
         .student-login-heading{text-align:left}
         .auth-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:14px}
         .auth-eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px #dbeafe;flex:0 0 auto}
@@ -51,39 +51,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .student-login-form input:hover{border-color:#b8c4d5}
         .student-login-form input:focus{border-color:#6366f1;box-shadow:0 0 0 4px #eef2ff;background:#fff}
         .password-field{display:block;position:relative;margin-top:8px}
-        .password-field input{margin-top:0;padding-right:66px}
-        .password-toggle{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:#f1f5f9;color:#475569;border-radius:8px;padding:6px 9px;font-size:11px;font-weight:800;cursor:pointer;min-height:30px}
-        .password-toggle:hover{background:#e2e8f0;color:#0f172a}
-        .password-toggle:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}
+        .password-field input{margin-top:0;padding-right:48px}
+        .password-toggle{position:absolute;right:5px;top:50%;width:36px;height:36px;transform:translateY(-50%);display:inline-flex;align-items:center;justify-content:center;border:0;background:transparent;color:#64748b;border-radius:8px;padding:0;cursor:pointer}
+        .password-toggle:hover{background:#f1f5f9;color:#0f172a}
+        .password-toggle:focus-visible{outline:2px solid #93c5fd;outline-offset:1px}
+        .password-toggle svg{width:18px;height:18px;display:block;pointer-events:none}
+        .password-toggle .eye-off{display:none}
+        .password-toggle.is-visible .eye{display:none}
+        .password-toggle.is-visible .eye-off{display:block}
         .student-login-submit{height:47px;border-radius:11px;font-size:14px;gap:9px;margin-top:3px;box-shadow:0 9px 22px rgba(37,99,235,.20)}
         .student-login-submit:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(37,99,235,.24)}
         .student-login-submit:disabled{cursor:wait;opacity:.8;transform:none}
         .submit-arrow{font-size:18px;line-height:1;transition:transform .2s ease}
         .student-login-submit:not(:disabled):hover .submit-arrow{transform:translateX(2px)}
-        .student-login-submit.is-loading .submit-arrow:after{content:'•••';font-size:12px;letter-spacing:1px}
         .auth-error{display:flex;align-items:center;gap:9px;margin:20px 0 0;padding:10px 12px;border-radius:11px}
         .alert-icon{width:19px;height:19px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#fee2e2;font-size:11px;font-weight:900;flex:0 0 auto}
-        .student-login-links{display:flex;flex-direction:column;align-items:center;gap:9px;margin-top:21px;font-size:13px}
-        .student-login-links a{color:var(--accent);font-weight:700;transition:color .2s ease}
-        .student-login-links a:hover{color:var(--primary-dark);text-decoration:underline;text-underline-offset:3px}
-        .login-divider{width:32px;height:1px;background:var(--line);margin:1px 0}
-        .student-login-links a:last-child{font-size:12px;color:#64748b;font-weight:600}
-        .student-login-links a:last-child:hover{color:var(--primary)}
-        .auth-footer{text-align:center;color:#94a3b8;font-size:11px;margin-top:18px}
-        .auth-footer span{padding:0 5px;color:#cbd5e1}
+        .student-login-links{display:flex;align-items:center;justify-content:center;gap:0;margin-top:20px;font-size:13px}
+        .student-login-links a{color:var(--accent);font-weight:700;padding:5px 10px;border-radius:7px;transition:color .2s ease,background .2s ease}
+        .student-login-links a:hover{color:var(--primary-dark);background:#f5f7ff;text-decoration:none}
+        .student-login-links .login-divider{width:1px;height:16px;background:var(--line);flex:0 0 auto}
+        .student-login-links a:last-child{font-size:13px;color:#64748b;font-weight:600}
+        .student-login-links a:last-child:hover{color:var(--primary);background:#f8fafc}
+        .auth-footer{text-align:center;color:#94a3b8;font-size:11px;margin-top:17px}
+        .auth-footer .footer-brand{color:#64748b;font-weight:700}
+        .auth-footer .footer-dot{padding:0 6px;color:#cbd5e1}
         @keyframes login-card-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
         @media(max-width:600px){
             .student-login-page{padding:18px 12px}
             .student-login-shell{width:100%}
             .auth-brand{font-size:14px;margin-bottom:18px!important}
-            .student-login-card{padding:26px 20px 23px;border-radius:20px}
+            .student-login-card{padding:26px 20px 22px;border-radius:20px}
             .student-login-card h1{font-size:30px}
             .student-login-form{margin-top:23px!important}
             .student-login-form label{margin-bottom:16px}
             .student-login-form input{height:47px}
             .student-login-submit{height:48px}
-            .student-login-links{margin-top:19px}
-            .auth-footer{margin-top:14px}
+            .student-login-links{margin-top:17px}
+            .student-login-links a{padding:5px 7px;font-size:12px}
+            .student-login-links a:last-child{font-size:12px}
+            .auth-footer{margin-top:13px}
+        }
+        @media(max-width:370px){
+            .student-login-links{flex-direction:column;gap:3px}
+            .student-login-links .login-divider{width:28px;height:1px}
         }
         @media(prefers-reduced-motion:reduce){.student-login-card{animation:none}.student-login-submit,.submit-arrow{transition:none}}
     </style>
@@ -118,7 +128,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <span>Password</span>
                     <span class="password-field">
                         <input id="student-password" type="password" name="password" required autocomplete="current-password" placeholder="Enter your password">
-                        <button type="button" class="password-toggle" id="password-toggle" aria-label="Show password" aria-pressed="false">Show</button>
+                        <button type="button" class="password-toggle" id="password-toggle" aria-label="Show password" aria-pressed="false" title="Show password">
+                            <svg class="eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+                            <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 3 18 18"/><path d="M10.6 6.2A9.7 9.7 0 0 1 12 6c6 0 9.5 6 9.5 6a17.7 17.7 0 0 1-3 3.6"/><path d="M6.7 6.7C4 8.4 2.5 12 2.5 12s3.5 6 9.5 6a9.8 9.8 0 0 0 3.3-.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+                        </button>
                     </span>
                 </label>
 
@@ -136,7 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </section>
 
         <footer class="auth-footer">
-            Student Result Management System <span aria-hidden="true">•</span> © 2026
+            <span class="footer-brand">Student Result Management System</span><span class="footer-dot" aria-hidden="true">•</span>© 2026
         </footer>
     </main>
 
@@ -151,8 +164,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 toggle.addEventListener('click', function () {
                     const showing = password.type === 'text';
                     password.type = showing ? 'password' : 'text';
-                    toggle.textContent = showing ? 'Show' : 'Hide';
+                    toggle.classList.toggle('is-visible', !showing);
                     toggle.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+                    toggle.setAttribute('title', showing ? 'Show password' : 'Hide password');
                     toggle.setAttribute('aria-pressed', String(!showing));
                 });
             }
@@ -161,9 +175,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 form.addEventListener('submit', function () {
                     if (!form.checkValidity()) return;
                     submit.disabled = true;
-                    submit.classList.add('is-loading');
                     submit.querySelector('.submit-label').textContent = 'Signing in...';
-                    submit.querySelector('.submit-arrow').textContent = '';
+                    submit.querySelector('.submit-arrow').textContent = '…';
                 });
             }
         })();

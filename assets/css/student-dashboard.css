@@ -1,0 +1,67 @@
+/* Student dashboard-only refinement. Keeps the shared project styles untouched. */
+.student-dashboard-main{padding-top:64px;padding-bottom:80px}
+.student-welcome{margin-bottom:30px}
+.student-welcome .eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.student-welcome .eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 5px #dbeafe;display:inline-block}
+.student-welcome h1{font-size:clamp(38px,4.5vw,54px);line-height:1.02;letter-spacing:-.055em;margin:0}
+.student-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:12px 0 0}
+.meta-separator{color:#cbd5e1}
+.student-stats{margin-bottom:22px}
+.student-stats .stat-card{min-height:124px;padding:22px 24px;display:flex;flex-direction:column;justify-content:center;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.student-stats .stat-card:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(15,23,42,.07);border-color:#d6deea}
+.student-stats .stat-card strong{font-size:32px}
+.student-stat-primary strong{font-size:36px!important}
+.student-status-card strong{font-size:24px!important;letter-spacing:-.02em}
+.status-pass{color:var(--success)}
+.status-fail{color:var(--danger)}
+.student-result-panel{margin-top:0;padding:26px}
+.student-result-panel .panel-head{margin-bottom:20px}
+.student-result-panel .panel-head h2{font-size:22px}
+.student-result-cta{white-space:nowrap;gap:8px}
+.student-result-cta span{font-size:17px;line-height:1}
+.student-mini-marks{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:0}
+.student-mini-marks span{min-width:0;padding:16px;border:1px solid #edf1f6;background:#f8fafc;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+.student-mini-marks span:hover{transform:translateY(-2px);border-color:#dbe4f0;background:#fff}
+.student-mini-marks label{display:block;color:var(--muted);font-size:12px;font-weight:700;line-height:1.35}
+.student-mini-marks b{font-size:20px;margin-top:6px;letter-spacing:-.025em}
+.student-mini-marks b small{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:0}
+.subject-mobile{display:none}
+.student-empty-state{max-width:720px;margin:0 auto;padding:48px 28px}
+.student-empty-state .eyebrow{margin-bottom:10px}
+.student-empty-state h2{font-size:24px;letter-spacing:-.03em}
+.student-empty-state p:last-child{margin-bottom:0;color:var(--muted);font-size:14px}
+
+@media(max-width:850px){
+  .student-dashboard-main{padding-top:52px}
+  .student-welcome h1{font-size:42px}
+  .student-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .student-status-card{grid-column:1/-1}
+  .student-mini-marks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .student-mini-marks span:last-child{grid-column:1/-1}
+}
+
+@media(max-width:600px){
+  .student-dashboard-main{padding-top:38px;padding-bottom:88px}
+  .student-welcome{margin-bottom:22px}
+  .student-welcome h1{font-size:34px;line-height:1.06}
+  .student-meta{font-size:13px;gap:6px 8px;line-height:1.4}
+  .student-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:16px}
+  .student-stats .stat-card{min-height:104px;padding:16px}
+  .student-stats .stat-card strong{font-size:27px}
+  .student-stat-primary strong{font-size:30px!important}
+  .student-status-card{grid-column:1/-1;min-height:88px!important}
+  .student-status-card strong{font-size:23px!important}
+  .student-result-panel{padding:18px;border-radius:16px}
+  .student-result-panel .panel-head{gap:12px}
+  .student-result-panel .panel-head h2{font-size:20px}
+  .student-result-cta{width:100%}
+  .student-mini-marks{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .student-mini-marks span{padding:13px 12px}
+  .student-mini-marks span:last-child{grid-column:auto}
+  .student-mini-marks b{font-size:18px}
+  .subject-desktop{display:none}
+  .subject-mobile{display:inline}
+  .student-empty-state{padding:36px 20px}
+  .student-dashboard .site-header .brand{font-size:13px}
+  .student-dashboard .site-header .nav-links a{font-size:11px;padding:7px}
+}

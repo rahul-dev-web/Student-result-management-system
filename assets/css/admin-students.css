@@ -32,7 +32,7 @@
 .students-page .student-search{display:flex;align-items:center;gap:8px;width:min(390px,100%)}
 .students-page .search-field{position:relative;flex:1;min-width:0}
 .students-page .search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#94a3b8;pointer-events:none;display:grid;place-items:center}
-.students-page .student-search input{width:100%;height:40px;margin:0;padding:0 38px 0 38px;border:1px solid #dbe3ec;border-radius:10px;background:#f8fafc;color:#0f172a;outline:none;font-size:12px;transition:.18s ease}
+.students-page .student-search input{width:100%;height:40px;margin:0;padding:0 38px;border:1px solid #dbe3ec;border-radius:10px;background:#f8fafc;color:#0f172a;outline:none;font-size:12px;transition:.18s ease}
 .students-page .student-search input::placeholder{color:#94a3b8}
 .students-page .student-search input:focus{border-color:#93c5fd;background:#fff;box-shadow:0 0 0 3px #eff6ff}
 .students-page .search-clear{position:absolute;right:7px;top:50%;transform:translateY(-50%);width:26px;height:26px;border:0;border-radius:7px;background:transparent;color:#94a3b8;cursor:pointer;font-size:16px;line-height:1}
@@ -66,8 +66,6 @@
 .students-page .students-empty h3{margin:0;font-size:18px;letter-spacing:-.025em}
 .students-page .students-empty p{max-width:390px;margin:7px auto 18px;color:#64748b;font-size:12px}
 .students-page .student-cards{display:none}
-
-/* Drawer */
 .students-page .drawer-backdrop{position:fixed;inset:0;z-index:200;background:rgba(15,23,42,.42);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s ease}
 .students-page .drawer-backdrop.open{opacity:1;visibility:visible}
 .students-page .student-drawer{position:fixed;z-index:210;top:0;right:0;bottom:0;width:min(520px,100%);background:#fff;box-shadow:-24px 0 60px rgba(15,23,42,.18);transform:translateX(100%);transition:transform .24s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column}
@@ -92,8 +90,6 @@
 .students-page .field-hint{display:block;margin-top:6px;color:#94a3b8;font-size:10px;line-height:1.45}
 .students-page .drawer-footer{display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:16px 26px;border-top:1px solid #e2e8f0;background:#fff}
 .students-page .drawer-footer .btn{min-height:40px}
-
-/* Delete confirmation */
 .students-page .confirm-backdrop{position:fixed;inset:0;z-index:300;display:grid;place-items:center;padding:20px;background:rgba(15,23,42,.48);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:.18s ease}
 .students-page .confirm-backdrop.open{opacity:1;visibility:visible}
 .students-page .confirm-dialog{width:min(430px,100%);padding:24px;background:#fff;border:1px solid #e2e8f0;border-radius:18px;box-shadow:0 24px 70px rgba(15,23,42,.2);transform:translateY(8px) scale(.98);transition:.18s ease}
@@ -106,11 +102,10 @@
 .students-page .confirm-actions .btn{min-height:39px}
 .students-page .btn-danger-solid{background:#dc2626;color:#fff;border-color:#dc2626}
 .students-page .btn-danger-solid:hover{background:#b91c1c;border-color:#b91c1c}
-
 body.drawer-open{overflow:hidden}
 @media(max-width:850px){
   .students-page .admin-layout{display:block;min-height:100vh}
-  .students-page .admin-sidebar{position:fixed;left:0;right:0;bottom:0;z-index:100;padding:0;background:rgba(15,23,42,.96);border-top:1px solid rgba(148,163,184,.18);box-shadow:0 -10px 30px rgba(15,23,42,.16);backdrop-filter:blur(14px)}
+  .students-page .admin-sidebar{position:fixed;left:0;right:0;bottom:0;z-index:100;padding:0;background:#0f172a;border-top:0;box-shadow:none;backdrop-filter:none}
   .students-page .admin-sidebar .brand{display:none}
   .students-page .admin-sidebar nav{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
   .students-page .admin-sidebar nav a{min-height:64px;justify-content:center;flex-direction:column;gap:4px;padding:8px 3px;border-radius:0;font-size:10px}
@@ -151,6 +146,4 @@ body.drawer-open{overflow:hidden}
   .students-page .drawer-footer .btn{width:100%}
   .students-page .confirm-dialog{padding:20px}
 }
-@media(prefers-reduced-motion:reduce){
-  .students-page .student-drawer,.students-page .drawer-backdrop,.students-page .confirm-backdrop,.students-page .confirm-dialog,.students-page .student-table tbody tr,.students-page .student-search input{transition:none}
-}
+@media(prefers-reduced-motion:reduce){.students-page .student-drawer,.students-page .drawer-backdrop,.students-page .confirm-backdrop,.students-page .confirm-dialog,.students-page .student-table tbody tr,.students-page .student-search input{transition:none}}

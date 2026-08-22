@@ -14,6 +14,7 @@ $result = $stmt->fetch();
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Student Dashboard</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/student-dashboard.css">
 </head>
 <body class="student-dashboard">
   <header class="site-header">

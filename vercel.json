@@ -8,10 +8,12 @@
   "routes": [
     { "src": "/", "dest": "/api/index.php" },
     { "src": "/login.php", "dest": "/api/login.php" },
+    { "src": "/forgot-password.php", "dest": "/api/forgot-password.php" },
     { "src": "/result.php", "dest": "/api/result.php" },
     { "src": "/student/dashboard.php", "dest": "/api/student/dashboard.php" },
     { "src": "/student/logout.php", "dest": "/api/student/logout.php" },
     { "src": "/admin/login.php", "dest": "/api/admin/login.php" },
+    { "src": "/admin/forgot-password.php", "dest": "/api/admin/forgot-password.php" },
     { "src": "/admin/dashboard.php", "dest": "/api/admin/dashboard.php" },
     { "src": "/admin/students.php", "dest": "/api/admin/students.php" },
     { "src": "/admin/results.php", "dest": "/api/admin/results.php" },

@@ -34,6 +34,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="description" content="Student portal login for the Student Result Management System.">
     <title>Student Login | Student Result Management System</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .student-login-page{padding:28px 16px;background:radial-gradient(circle at 50% 0%,#e9efff 0,#f5f7fb 36%,#f8fafc 100%)}
+        .student-login-shell{width:min(440px,100%)}
+        .auth-brand{font-size:16px;letter-spacing:-.04em;transition:opacity .2s ease}
+        .auth-brand:hover{opacity:.78}
+        .student-login-card{padding:34px 32px 28px;border-radius:24px;box-shadow:0 24px 70px rgba(15,23,42,.10);animation:login-card-in .35s ease both}
+        .student-login-heading{text-align:left}
+        .auth-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+        .auth-eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px #dbeafe;flex:0 0 auto}
+        .student-login-card h1{font-size:34px;line-height:1.08;margin-bottom:7px}
+        .student-login-card .muted{margin:0;font-size:14px;line-height:1.55}
+        .student-login-form{margin-top:26px!important}
+        .student-login-form label{margin-bottom:18px}
+        .student-login-form input{height:46px;margin-top:8px;border-radius:11px;border-color:#d7dee9;padding:11px 13px;transition:border-color .2s ease,box-shadow .2s ease,background .2s ease}
+        .student-login-form input:hover{border-color:#b8c4d5}
+        .student-login-form input:focus{border-color:#6366f1;box-shadow:0 0 0 4px #eef2ff;background:#fff}
+        .password-field{display:block;position:relative;margin-top:8px}
+        .password-field input{margin-top:0;padding-right:66px}
+        .password-toggle{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:#f1f5f9;color:#475569;border-radius:8px;padding:6px 9px;font-size:11px;font-weight:800;cursor:pointer;min-height:30px}
+        .password-toggle:hover{background:#e2e8f0;color:#0f172a}
+        .password-toggle:focus-visible{outline:2px solid #93c5fd;outline-offset:2px}
+        .student-login-submit{height:47px;border-radius:11px;font-size:14px;gap:9px;margin-top:3px;box-shadow:0 9px 22px rgba(37,99,235,.20)}
+        .student-login-submit:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(37,99,235,.24)}
+        .student-login-submit:disabled{cursor:wait;opacity:.8;transform:none}
+        .submit-arrow{font-size:18px;line-height:1;transition:transform .2s ease}
+        .student-login-submit:not(:disabled):hover .submit-arrow{transform:translateX(2px)}
+        .student-login-submit.is-loading .submit-arrow:after{content:'•••';font-size:12px;letter-spacing:1px}
+        .auth-error{display:flex;align-items:center;gap:9px;margin:20px 0 0;padding:10px 12px;border-radius:11px}
+        .alert-icon{width:19px;height:19px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#fee2e2;font-size:11px;font-weight:900;flex:0 0 auto}
+        .student-login-links{display:flex;flex-direction:column;align-items:center;gap:9px;margin-top:21px;font-size:13px}
+        .student-login-links a{color:var(--accent);font-weight:700;transition:color .2s ease}
+        .student-login-links a:hover{color:var(--primary-dark);text-decoration:underline;text-underline-offset:3px}
+        .login-divider{width:32px;height:1px;background:var(--line);margin:1px 0}
+        .student-login-links a:last-child{font-size:12px;color:#64748b;font-weight:600}
+        .student-login-links a:last-child:hover{color:var(--primary)}
+        .auth-footer{text-align:center;color:#94a3b8;font-size:11px;margin-top:18px}
+        .auth-footer span{padding:0 5px;color:#cbd5e1}
+        @keyframes login-card-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        @media(max-width:600px){
+            .student-login-page{padding:18px 12px}
+            .student-login-shell{width:100%}
+            .auth-brand{font-size:14px;margin-bottom:18px!important}
+            .student-login-card{padding:26px 20px 23px;border-radius:20px}
+            .student-login-card h1{font-size:30px}
+            .student-login-form{margin-top:23px!important}
+            .student-login-form label{margin-bottom:16px}
+            .student-login-form input{height:47px}
+            .student-login-submit{height:48px}
+            .student-login-links{margin-top:19px}
+            .auth-footer{margin-top:14px}
+        }
+        @media(prefers-reduced-motion:reduce){.student-login-card{animation:none}.student-login-submit,.submit-arrow{transition:none}}
+    </style>
 </head>
 <body class="auth-page student-login-page">
     <main class="auth-shell student-login-shell">

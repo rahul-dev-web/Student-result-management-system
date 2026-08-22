@@ -35,13 +35,21 @@ $admin = $_SESSION['admin'] ?? null;
                 <a class="btn btn-ghost" href="admin/login.php">Admin Login</a>
             </div>
         </div>
-        <div class="hero-card">
-            <div class="result-preview">
-                <div class="preview-top"><span>RESULT</span><span class="status-badge">PASS</span></div>
-                <h3>Rahul Jha</h3>
-                <p>Roll No. 2024001 • BCA • Semester 4</p>
-                <div class="preview-score"><strong>80%</strong><small>Overall Percentage</small></div>
-                <div class="preview-grid"><div><small>Grade</small><b>A</b></div><div><small>Total</small><b>400 / 500</b></div></div>
+        <div class="hero-card qr-card">
+            <div class="qr-preview">
+                <div class="qr-heading">
+                    <span class="eyebrow">Quick Access</span>
+                    <span class="status-badge">LIVE</span>
+                </div>
+                <img
+                    class="home-qr"
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=12&data=https%3A%2F%2Fstudent-result-management-system-lime.vercel.app"
+                    alt="QR code to open Student Result Management System"
+                    width="320"
+                    height="320"
+                >
+                <h3>Scan to Open</h3>
+                <p>Scan this QR code with your phone to open the project directly.</p>
             </div>
         </div>
     </section>
